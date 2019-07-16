@@ -2,5 +2,12 @@
     "app": {
         "title": "پروژه تازه ستاپ شده",
         "description": "این یه پروژه امتحانیه که با React Native ستاپ شده"
+    },
+    "home": {
+        "title": "صفحه اصلی",
+        "selected_lang": "زبان انتخابی شما"
+    },
+    "about": {
+        "title": "درباره ما"
     }
 }

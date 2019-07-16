@@ -1,5 +1,5 @@
 import { Config } from '../Constants';
-
+import I18n from 'locales';
 
 const {
     SET_LANG
@@ -12,13 +12,14 @@ export const setLang = (lang) => {
     const { setLang } = Language;
     return (dispatch) => {
         dispatch(setLang(lang));
+        I18n.locale = lang;
     }
 }
 
 
 // INTERNAL FUNCTIONS
 const Language = {
-    _setLang(lang){
+    setLang(lang){
         return {
             type: SET_LANG,
             data: lang

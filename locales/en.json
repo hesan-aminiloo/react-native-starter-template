@@ -2,5 +2,12 @@
     "app": {
         "title": "React Native Starter Template",
         "description": "This is a react native boilerplate"
+    },
+    "home": {
+        "title": "Home",
+        "selected_lang": "Your selected lang is"
+    },
+    "about": {
+        "title": "About"
     }
 }

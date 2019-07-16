@@ -11,6 +11,9 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import store from './configureStore';
 
+// Navigator
+import RootStack from './src/Router';
+import NavigationService from './NavigationService';
 
 class App extends Component{
     constructor(){
@@ -26,15 +29,9 @@ class App extends Component{
                 <PersistGate
                     persistor = { store.persistor }
                 >
-                    <SafeAreaView style={ container }>
-                        <Text>
-                            {__('app.title')}
-                        </Text>
-
-                        <Text>
-                            {__('app.description')}
-                        </Text>
-                    </SafeAreaView>
+                    <RootStack ref     =   { navigatorRef => {
+                            NavigationService.setTopLevelNavigator(navigatorRef);
+                    }} />
                 </PersistGate>
             </Provider>
         )
